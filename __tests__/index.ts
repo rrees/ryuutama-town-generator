@@ -1,5 +1,6 @@
-import * as rtg from "../index.ts";
+import * as rtg from "../src/index.ts";
 
 it('Should generate something', () => {
-	expect(rtg.generate()).toBe(1);
+	const town = rtg.generate();
+	expect(town.size).toBe(1);
 });

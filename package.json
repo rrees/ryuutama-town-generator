@@ -4,13 +4,20 @@
     "typescript": "^2.3.2"
   },
   "scripts": {
-  	"test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "jest": {
-  	"moduleFileExtensions": ["ts", "tsx", "js"],
-  	"transform": {
-  		"^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
-  	},
-  	"testMatch": ["**/__tests__/*.(ts|tsx|js)"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx|js)"
+    ]
   }
 }
