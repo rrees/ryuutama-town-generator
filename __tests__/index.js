@@ -1,4 +1,6 @@
-import * as rtg from "../src/index.ts";
+//import * as rtg from "../src/index.ts";
+
+const rtg = require("../src/index.ts");
 
 it('Should generate something', () => {
 	const town = rtg.generate();
@@ -7,7 +9,7 @@ it('Should generate something', () => {
 
 it('Should contain the expected town elements', () => {
 	const keys = Array.from(rtg.generate().keys());
-	console.log(keys);
+
 	const expectedKeys = [
 		"Population",
 		"Ruling attitude",
