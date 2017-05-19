@@ -13,6 +13,31 @@ export const populationTable = {
 	modifier: undefined
 } as Table;
 
+export const governmentTable = {
+	choices: [
+		[0, 0, "As needed"],
+		[1, 2, "Eldest"],
+		[3, 4, "Elected Head"],
+		[5, 6, "Elected council"],
+		[7, 7, "Lottery"],
+		[8, 9, "Hereditary council"],
+		[10, 11, "Hereditary ruler"]
+	],
+	upperLimit: 10,
+	modifier: (state) => {
+		if(state.Population === "Village") {
+			return -1;
+		}
+
+		if(state.Population === "City"
+			|| state.Population === "Large city") {
+			return 1;
+		}
+
+		return 0;
+	}
+} as Table;
+
 export const rulingAttitudes = [
 	"Resistant to change",
 	"Secretive",

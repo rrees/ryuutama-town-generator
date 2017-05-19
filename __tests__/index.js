@@ -4,7 +4,7 @@ const rtg = require("../src/index.ts");
 
 it('Should generate something', () => {
 	const town = rtg.generate();
-	expect(town.size).toBe(2);
+	expect(town.size).toBe(3);
 });
 
 it('Should contain the expected town elements', () => {
@@ -12,6 +12,7 @@ it('Should contain the expected town elements', () => {
 
 	const expectedKeys = [
 		"Population",
+		"Government",
 		"Ruling attitude",
 	];
 
