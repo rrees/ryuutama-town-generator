@@ -50,3 +50,14 @@ export const rulingAttitudes = [
 	"Meticulous",
 	"Idealistic"
 ];
+
+export const environment = [
+	'Forest',
+	'Valley',
+	'Coast',
+	'Cliff',
+	'Wasteland',
+	'Plains',
+	'Trees',	
+	'Hills'
+];

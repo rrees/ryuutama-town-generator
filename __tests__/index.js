@@ -4,7 +4,7 @@ const rtg = require("../src/index.ts");
 
 it('Should generate something', () => {
 	const town = rtg.generate();
-	expect(town.size).toBe(3);
+	expect(town.size).toBe(4);
 });
 
 it('Should contain the expected town elements', () => {
@@ -14,6 +14,7 @@ it('Should contain the expected town elements', () => {
 		"Population",
 		"Government",
 		"Ruling attitude",
+		"Environment",
 	];
 
 	expect(keys).toEqual(expect.arrayContaining(expectedKeys));
