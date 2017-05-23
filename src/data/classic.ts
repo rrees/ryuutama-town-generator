@@ -61,3 +61,22 @@ export const environment = [
 	'Trees',	
 	'Hills'
 ];
+
+export const sights = [
+	'Greenery',
+	'Festive colours',
+	'Drab buildings',
+	'Gleaming buildings',
+	"Organic shapes",
+	"Geometric designs"
+];
+
+
+export const sounds = [
+	'Running water',
+	'Birds',
+	'Market hawkers',
+	'Clanging metal',
+	'Children',
+	'Livestock'
+];
