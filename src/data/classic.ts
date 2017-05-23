@@ -80,3 +80,25 @@ export const sounds = [
 	'Children',
 	'Livestock'
 ];
+
+export const smells = [
+	"Animals",
+	"Cookfires",
+	"Forest",
+	"Water",
+	"Speciality goods",
+	"Waste"
+];
+
+export const threats = [
+	'Famine',
+	'Drought',
+	'Monsters',
+	"Natural disaster",
+	"Bandits",
+	"Plague",
+	"Unfair treatment",
+	"Missing people",
+	"Vermin",
+	"Isolated"
+];

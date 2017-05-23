@@ -13,6 +13,8 @@ export function classic(): Town {
 		(town: Town) => selectors.chooseOne('Environment', classicData.environment, town),
 		(town: Town) => selectors.chooseOne('Sights', classicData.sights, town),
 		(town: Town) => selectors.chooseOne('Sounds', classicData.sounds, town),
+		(town: Town) => selectors.chooseOne('Smells', classicData.smells, town),
+		(town: Town) => selectors.chooseOne('Threats', classicData.threats, town),
 	];
 
 	return townBuilders.reduce((town, builder) => builder(town), new Map());
