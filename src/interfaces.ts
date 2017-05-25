@@ -10,3 +10,9 @@ export interface Table {
 	upperLimit: number,
 	modifier: (Town) => number
 }
+
+export interface ModifiedPick {
+	upperLimit: number,
+	choices: Array<string>,
+	modifier: (Town) => number
+}

@@ -1,6 +1,6 @@
 import {TableEntry} from '../aliases';
 
-import {Table} from '../interfaces';
+import {Table, ModifiedPick} from '../interfaces';
 
 export const populationTable = {
 	choices: [
@@ -37,6 +37,71 @@ export const governmentTable = {
 		return 0;
 	}
 } as Table;
+
+export const buildings = {
+	upperLimit: 6,
+	choices: [
+		"Bridge",
+		"Market",
+		"Shrine",
+		"Speciality production",
+		"Civic center",
+		"Monument",
+		"Castle",
+	],
+	modifier: function(state) {
+		const population = state.get('Population');
+		if(population.value === "City"
+			|| population.value === "Large city") {
+			return 1;
+		}
+
+		return 0;
+	}
+} as ModifiedPick;
+
+export const specialityGoods = {
+	upperLimit: 10,
+	choices: [
+		"Cotton, wool and flax",
+		"Grain, vegetables and staples",
+		"Raw metal",
+		"Lumber",
+		"Wine, ale and spirits",
+		"Furs, hides, cloth",
+		"Livestock and pets",
+		"Leather goods",
+		"Wooden goods",
+		"Housewares",
+		"Herbs, salt, spices and sugar",
+		"Clothing, armour and weapons",
+		"Exotic fruits",
+		"Painting and sculpture",
+		"Jewelery",
+		"Perfumes and potions",
+		"Scrolls and books",
+		"Magical items",
+	],
+	modifier: function(state) {
+		const modifiers = [
+			["Town", 2],
+			["City", 5],
+			["Large city", 8]
+		];
+		const population = state.get('Population');
+
+		function reducer(currentModifer, [size, modifier]) {
+			if(population.value === size) {
+				return modifier;
+			}
+			
+			return currentModifer;
+		}
+
+		return modifiers.reduce(reducer, 0);
+	}	
+} as ModifiedPick;
+
 
 export const rulingAttitudes = [
 	"Resistant to change",
