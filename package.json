@@ -1,12 +1,12 @@
 {
 	"name": "ryuutama-town-generator",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"license": "MIT",
 	"main": "./lib/index.js",
-	"directories": [
-		"src",
-		"lib"
-	],
+	"directories": {
+		"src": "src",
+		"lib": "lib"
+	},
 	"keywords": [
 		"procedural generation"
 	],
