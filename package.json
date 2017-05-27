@@ -1,4 +1,17 @@
 {
+	"name": "ryuutama-town-generator",
+	"version": "0.0.1",
+	"license": "MIT",
+	"keywords": [
+		"procedural generation"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rrees/ryuutama-town-generator"
+	},
+	"engines": {
+		"node": ">=7"
+	},
   "devDependencies": {
     "jest": "^20.0.1",
     "typescript": "^2.3.2"
