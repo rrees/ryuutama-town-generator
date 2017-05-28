@@ -23,8 +23,8 @@ export function chooseFromTable(key, table: Table, town: Town): Town {
 }
 
 export function chooseOneWithModifier(key, table: ModifiedPick, town: Town): Town {
-	const choice = table.modifier ? select(table.upperLimit, 1) + table.modifier(town) : select(table.upperLimit, 1);
-	
+	const choice = table.modifier ? select(table.upperLimit) + table.modifier(town) : select(table.upperLimit);
+
 	return town.set(key, {
 		name: key,
 		value: table.choices[choice]
